@@ -1,0 +1,159 @@
+/* Weather Dashboard Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #1a2130;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#search {
+    margin: 20px auto;
+    position: relative;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Limits the size on larger screens */
+    display: flex;
+}
+
+#city {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 50px;
+    outline: none;
+    background: linear-gradient(to right, #ebe9ed 21.5%, #5a72a0 100%);
+    border: 1px solid #ccc;
+    color: #333;
+    font-size: 18px;
+}
+
+#city::placeholder {
+    color: #333;
+    opacity: 1;
+}
+
+#search-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    height: 100%;
+}
+
+#search-btn i {
+    font-size: 20px;
+    color: #333;
+}
+
+.weather-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(#5a72a0, #ebe9ed);
+    color: #021526;
+    max-width: 400px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-location-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.weather-info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+#weather-icon {
+    font-size: 60px;
+}
+
+.weather-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.weather-description {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+}
+
+.weather-labels {
+    text-align: left;
+}
+
+.weather-labels, .weather-values {
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-labels p, .weather-values p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+h2 {
+    color: #fff;
+}
+
+#forecast-container {
+    margin-top: 20px;
+}
+.hidden {
+    display: none;
+}
+
+.forecast-row {
+    display: flex;
+    flex-wrap: wrap;  /* Allows wrapping of forecast cards */
+    justify-content: center;  /* Center the forecast cards */
+}
+
+.forecast-day {
+    flex: 0 0 15%;  /* Set each card to take up 20% width for 5 in a row */
+    margin: 10px;  /* Added margin for better spacing */
+    padding: 10px;
+    border-radius: 10px;
+    background: linear-gradient(#5a72a0, #ebe9ed);
+    color: #021526;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {  /* Adjust the max-width as needed */
+    .forecast-day {
+        flex: 0 0 30%;  /* 2 by 2 layout on larger mobile screens */
+    }
+}
+
+@media (max-width: 768px) {  /* For smaller mobile devices */
+    .forecast-day {
+        flex: 0 0 50%;  /* Stack in a single column on mobile */
+    }
+}
+
